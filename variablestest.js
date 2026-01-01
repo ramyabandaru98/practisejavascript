@@ -80,8 +80,8 @@ console.log(a5/a6);
 let rameshsalary= 10000;
 let sureshsalary= 15000;
 let hikepercentage= 25
-const Newsalaryoframesh = ((hikepercentage/100) * rameshsalary);
-const Newsalaryofsuresh =((hikepercentage/100) * sureshsalary);
-console.log("salary of ramesh after hike=",rameshsalary+ Newsalaryoframesh);
-console.log("salary of suresh after hike=",sureshsalary+ Newsalaryofsuresh);
+const Newsalaryoframesh = ((hikepercentage/100) * rameshsalary+rameshsalary);
+const Newsalaryofsuresh =((hikepercentage/100) * sureshsalary+sureshsalary);
+console.log("salary of ramesh after hike=",Newsalaryoframesh);
+console.log("salary of suresh after hike=", Newsalaryofsuresh);
 
