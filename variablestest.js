@@ -58,11 +58,6 @@ console.log(value);
 console.log(total);
 
 
-//NAN
-let a5=10;
-let a6="sai";
-console.log(a5/a6);
-
 
 //Ramesh and Suresh are two friends. Ramesh salary is 10,000 and Suresh Salary is 15,000.
 //  I wanted ramesh and suresh salary increase by 25% hike.
