@@ -3,10 +3,10 @@
 
 class Utilities{
     Utilities(){
-        this.browser = this.name()
+        this.browser = null
     }
     async name() {
-    const browser = remote({
+    this.browser= await remote({
             automationProtocol: 'webdriver',
             logLevel: 'info',
             capabilities: {
@@ -14,20 +14,27 @@ class Utilities{
 
             }
         })
-    return browser()
+    //return browser()
 }
 async  enterText(selector,value){
-      await browser.$(`${selector}`).setValue(`${value}`)
+      await this.browser.$(`${selector}`).setValue(`${value}`)
 
   }
 async link(openurl){
-    await browser.url(`${openurl}`)
+
+    await this.browser.url(`${openurl}`)
+    await this.browser.execute(() => new MutationObserver(() => document.querySelectorAll('#CybotCookiebotDialog,iframe[src*="cookiebot"]').forEach(e => e.remove())).observe(document, { subtree: 1, childList: 1 }))
+  
+
  }
+async tim(value){
+await this.browser.pause(value)
+}
  async guide(selector1) {
-    await browser.$(`${selector1}`).click()  
+    await this.browser.$(`${selector1}`).click()  
  }
 async win(){
-    await browser.maximizeWindow()
+    await this.browser.maximizeWindow()
 }
 }
 module.exports={Utilities}
