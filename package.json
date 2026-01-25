@@ -1,0 +1,16 @@
+{
+  "name": "practisejavascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "variablestest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^143.0.4",
+    "webdriverio": "^9.23.2"
+  }
+}
